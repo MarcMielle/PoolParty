@@ -1,0 +1,7 @@
+<h1>All my swimming pools reservations</h1>
+
+<ul>
+  <% @reservations.each do |reservation| %>
+    <li><%= link_to reservation.title, reservation_path(reservation) %></li>
+  <% end %>
+</ul>
