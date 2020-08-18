@@ -1,2 +1,0 @@
-class SwimmingpoolsController < ApplicationController
-end
