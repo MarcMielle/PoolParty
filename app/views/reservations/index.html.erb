@@ -2,6 +2,7 @@
 
 <ul>
   <% @reservations.each do |reservation| %>
-    <li><%= link_to reservation.title, reservation_path(reservation) %></li>
+    <li><%= reservation.user.name %></li>
+    <li><%= reservation.swimming_pool.name %></li>
   <% end %>
 </ul>
