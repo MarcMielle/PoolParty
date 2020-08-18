@@ -1,0 +1,7 @@
+<ul>
+  <% @swimmingpools.each do |swimmingpool| %>
+    <li><h1><%= swimmingpool.name %></h1></li>
+    <li><%= swimmingpool.user.first_name %></li>
+    <li><%= swimmingpool.location %></li>
+  <% end %>
+</ul>
