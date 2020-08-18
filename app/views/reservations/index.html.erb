@@ -2,22 +2,22 @@
   <h1>All your swimming pools reservations</h1>
 
 
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <% @reservations.each do |reservation| %>
-        <h2><%= reservation.user.first_name.capitalize %> <%= reservation.user.last_name.capitalize %></h2>
-        <p><strong><%= reservation.swimming_pool.name %></strong></p>
-        <p>Starting: <strong><%= reservation.starting_date %></strong></p>
-        <p>Ending: <strong><%= reservation.ending_date %></strong></p>
-        <p>Status: <strong><%= reservation.status %></strong></p>
-    </div>
+  <% @reservations.each do |reservation| %>
+    <div class="card-trip">
+      <%= cl_image_tag reservation.swimming_pool.photo.key, crop: :fill %>
+      <div class="card-trip-infos">
+        <div>
+            <h2><%= reservation.user.first_name.capitalize %> <%= reservation.user.last_name.capitalize %></h2>
+            <p><strong><%= reservation.swimming_pool.name %></strong></p>
+            <p>Starting: <strong><%= reservation.starting_date %></strong></p>
+            <p>Ending: <strong><%= reservation.ending_date %></strong></p>
+            <p>Status: <strong><%= reservation.status %></strong></p>
+        </div>
         <h2 class="card-trip-pricing">€<%= reservation.total_price %></h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        <%= cl_image_tag reservation.user.photo.key, crop: :fill %>
 
-      <% end %>
+      </div>
     </div>
-  </div>
+<% end %>
       <%= link_to 'Back to Swimming Pools', swimming_pools_path, class: "btn btn-small btn-primary" %>
 </div>
