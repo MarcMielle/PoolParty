@@ -8,6 +8,8 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
   devise :database_authenticatable, :validatable, :registerable, :recoverable, :rememberable, :trackable
+
+  # has_one_attached :avatar
 end
 
 # current_user.owner_reservations # => RESA OWNER
