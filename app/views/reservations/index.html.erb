@@ -1,8 +1,23 @@
-<h1>All my swimming pools reservations</h1>
+<div class="container">
+  <h1>All your swimming pools reservations</h1>
 
-<ul>
-  <% @reservations.each do |reservation| %>
-    <li><%= reservation.user.name %></li>
-    <li><%= reservation.swimming_pool.name %></li>
-  <% end %>
-</ul>
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <% @reservations.each do |reservation| %>
+        <h2><%= reservation.user.first_name.capitalize %> <%= reservation.user.last_name.capitalize %></h2>
+        <p><strong><%= reservation.swimming_pool.name %></strong></p>
+        <p>Starting: <strong><%= reservation.starting_date %></strong></p>
+        <p>Ending: <strong><%= reservation.ending_date %></strong></p>
+        <p>Status: <strong><%= reservation.status %></strong></p>
+    </div>
+        <h2 class="card-trip-pricing">€<%= reservation.total_price %></h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+
+      <% end %>
+    </div>
+  </div>
+      <%= link_to 'Back to Swimming Pools', swimming_pools_path, class: "btn btn-small btn-primary" %>
+</div>
