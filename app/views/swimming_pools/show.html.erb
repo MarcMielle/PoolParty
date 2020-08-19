@@ -1,16 +1,17 @@
-<div class="container">
-  <%= image_tag("/assets/piscine.jpg", alt: "like", class: "like_image_for_index", size: "300x300") %>
-  <br>
+<div class="banner banner-show" style="background-image: linear-gradient(rgba(24,24,24,0.9),rgba(0,0,0,0.4)), url(<%= cl_image_path @swimming_pool.photo.key, crop: :fill %>);">
+  <div class="container">
+    <h1><%= @swimming_pool.name %></h1>
+    <p><%= @swimming_pool.location %></p>
+    <%= link_to 'Book now!', new_swimming_pool_reservation_path(@swimming_pool), class: "btn btn-flat" %>
+  </div>
+</div>
 
-  <h1><%= @swimming_pool.name %></h1>
-  <strong>Address:</strong>
+<div class="container">
+<strong>Address:</strong>
   <p class="inset"><%= @swimming_pool.location %></p>
   <strong>Description:</strong>
   <p class="inset"><%= @swimming_pool.description %></p>
   <strong>Price:</strong>
   <p class="inset"><%= @swimming_pool.price_per_day %></p>
-  <%= link_to 'Book this swimming pool', new_swimming_pool_reservation_path(@swimming_pool) %> |
-  <%= link_to 'Back', swimming_pools_path %> |
-
+  <%= link_to 'Back', swimming_pools_path %>
 </div>
-
