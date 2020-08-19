@@ -9,16 +9,16 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.new(restaurant_params)
-    @restaurant.save
+    @reservation = Reservation.new(reservation_params)
+    @reservation.save
     # no need for app/views/restaurants/create.html.erb
-    redirect_to restaurant_path(@restaurant)
+    redirect_to swimming_pools_path
   end
 
   private
 
-  def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :rating)
+  def reservation_params
+    params.require(:reservation).permit(:starting_date, :ending_date, :total_price)
   end
 
 end
