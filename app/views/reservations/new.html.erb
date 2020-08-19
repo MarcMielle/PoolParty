@@ -1,0 +1,12 @@
+<h1>Book now</h1>
+
+<div class="container">
+<%= simple_form_for(@reservation) do |f| %>
+
+  <%= f.input :starting_date, as: :date, html5: true %>
+  <%= f.input :ending_date, as: :date, html5: true %>
+  <%= f.input :total_price %>
+  <%= f.submit class: "btn btn-flat-blue" %>
+<% end %>
+
+</div>
