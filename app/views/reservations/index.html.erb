@@ -14,7 +14,7 @@
             <p>Status: <strong><%= reservation.status %></strong></p>
         </div>
         <h2 class="card-trip-pricing">€<%= reservation.total_price %></h2>
-        <%= cl_image_tag reservation.user.photo.key, crop: :fill %>
+        <%= cl_image_tag reservation.user.avatar.key, crop: :fill, class: "card-trip-user avatar-bordered" %>
 
       </div>
     </div>
