@@ -6,7 +6,8 @@ class SwimmingPoolsController < ApplicationController
     @markers = @swimming_pools.map do |swimming_pool|
       {
         lat: swimming_pool.latitude,
-        lng: swimming_pool.longitude
+        lng: swimming_pool.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { swimming_pool: swimming_pool })
       }
     end
   end
