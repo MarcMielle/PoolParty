@@ -1,4 +1,6 @@
 class ReservationsController < ApplicationController
-  def show
+  def index
+    # Reservations where le user est == au current_user
+    @reservations = current_user.reservations
   end
 end
