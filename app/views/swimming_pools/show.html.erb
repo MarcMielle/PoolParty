@@ -1,0 +1,16 @@
+<div class="container">
+  <%= image_tag("/assets/piscine.jpg", alt: "like", class: "like_image_for_index", size: "300x300") %>
+  <br>
+
+  <h1><%= @swimming_pool.name %></h1>
+  <strong>Address:</strong>
+  <p class="inset"><%= @swimming_pool.location %></p>
+  <strong>Description:</strong>
+  <p class="inset"><%= @swimming_pool.description %></p>
+  <strong>Price:</strong>
+  <p class="inset"><%= @swimming_pool.price_per_day %></p>
+  <%= link_to 'Book this swimming pool', new_swimming_pool_reservation_path(@swimming_pool) %> |
+  <%= link_to 'Back', swimming_pools_path %> |
+
+</div>
+
