@@ -1,6 +1,7 @@
 class SwimmingPool < ApplicationRecord
   belongs_to :user
   has_many :reservations
+  has_one_attached :photo
 
   validates :location, presence: true
   validates :name, presence: true
