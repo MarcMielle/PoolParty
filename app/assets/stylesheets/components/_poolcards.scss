@@ -1,0 +1,47 @@
+body{
+  font-family: verdana;
+}
+.pool-title{
+  text-align: center;
+  padding:1em;
+}
+
+.pool-image{
+  height:250px;
+  object-fit: cover;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.pool-card{
+  border-radius: 50px;
+  border:none;
+
+  &:hover {
+    box-shadow: 7px -6px 23px -2px rgba(0,0,0,0.54);
+  }
+}
+.pool-body{
+  margin:1em 2em;
+  text-align:center;
+}
+.pool-name{
+  color: $bluelagoon;
+  text-align: center;
+  font-size: 25px;
+  text-decoration: none;
+  margin:auto;
+  &:hover {
+    color: darken($bluelagoon, 10%);
+  }
+}
+
+.pool-owner{
+  color: $fuschia;
+  font-style: italic;
+}
+
+.pool-address{
+
+}
+

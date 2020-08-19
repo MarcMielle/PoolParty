@@ -1,0 +1,14 @@
+<h1 class="pool-title">Swimming Pools</h1>
+
+<div class="card-deck">
+  <% @swimmingpools.each do |swimmingpool| %>
+      <div class="card pool-card">
+        <%= image_tag "pool.jpg", alt: "pool", class: "card-img-top pool-image" %>
+        <div class="card-body pool-body">
+          <%= link_to "#{swimmingpool.name}", swimming_pool_path(swimmingpool), class: "pool-name card-title" %>
+          <p class="card-text pool-owner"><%= swimmingpool.user.first_name %></p>
+          <p class="card-text pool-address"><%= swimmingpool.location %></p>
+        </div>
+      </div>
+  <% end %>
+</div>

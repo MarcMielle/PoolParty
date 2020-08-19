@@ -5,4 +5,8 @@ class SwimmingPoolsController < ApplicationController
     @swimming_pool = SwimmingPool.find(params[:id])
   end
 
+  def index
+    @swimmingpools = SwimmingPool.all
+  end
+
 end
