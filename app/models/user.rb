@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   has_many :swimming_pools
   has_many :owner_reservations, through: :swimming_pools, source: :reservations # => RESA OWNER
 
@@ -6,8 +10,6 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-
-  devise :database_authenticatable, :validatable, :registerable, :recoverable, :rememberable, :trackable
 
   has_one_attached :avatar
 end
