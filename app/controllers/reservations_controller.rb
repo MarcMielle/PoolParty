@@ -25,7 +25,7 @@ class ReservationsController < ApplicationController
     @reservation.swimming_pool = SwimmingPool.find(params[:swimming_pool_id])
 
     # valeur a status: pending
-    @reservation.status = "Pending"
+    @reservation.status = "pending"
     # valeur a total_price: multiplication prix / jour
 
     @reservation.total_price = (@reservation.ending_date - @reservation.starting_date).to_i * @reservation.swimming_pool.price_per_day # price_per_day * (date fin - date debut)

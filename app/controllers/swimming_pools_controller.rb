@@ -32,7 +32,7 @@ class SwimmingPoolsController < ApplicationController
   private
 
   def swimming_pool_params
-    params.require(:swimming_pool).permit(:location, :name, :description, :price_per_day)
+    params.require(:swimming_pool).permit(:location, :name, :description, :price_per_day, :photo)
   end
 
 
