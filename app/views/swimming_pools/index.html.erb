@@ -1,5 +1,5 @@
-<div class="container">
-<h1 class="pool-title">Swimming Pools</h1>
+<div class="container ">
+  <h1>Swimming Pools</h1>
 
 <div class="card-deck">
   <% @swimming_pools.each do |swimming_pool| %>
@@ -10,15 +10,14 @@
           <p class="card-text pool-owner"><%= swimming_pool.user.first_name %></p>
           <p class="card-text pool-address"><%= swimming_pool.location %></p>
         </div>
-      </div>
-  <% end %>
-</div>
-<br>
-<br>
+    <% end %>
+  </div>
+  <br>
+  <br>
 
-<div id="map"
-     style="width: 75%; height: 600px; margin:0px auto;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  <div id="map"
+       style="width: 75%; height: 600px; margin:0px auto;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 </div>
