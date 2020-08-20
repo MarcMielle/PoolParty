@@ -17,6 +17,23 @@ class SwimmingPoolsController < ApplicationController
     @swimming_pool = SwimmingPool.find(params[:id])
   end
 
+  def new
+    @swimming_pool = SwimmingPool.new
+  end
+
+  def create
+    @swimming_pool = SwimmingPool.new(swimming_pool_params)
+    @swimming_pool.save
+    # no need for app/views/restaurants/create.html.erb
+    redirect_to swimming_pools_path
+  end
+
+  private
+
+  def swimming_pool_params
+    params.require(:swimming_pool).permit(:location, :name, :description, :price_per_day)
+  end
+
 
 
 end
