@@ -15,7 +15,7 @@ file = URI.open('https://perfectczechwomen.com/wp-content/uploads/2019/04/New-Pr
 marion.avatar.attach(io: file, filename: 'marion.png', content_type: 'image/png')
 marion.save!
 
-nico = User.new(first_name: "Nico", last_name: "Hubert", email: "nicolas@example.com", password: "password")
+nico = User.new(first_name: "Nico", last_name: "Hbt", email: "nicolas@example.com", password: "password")
 file = URI.open('https://i.pinimg.com/736x/25/69/99/2569998e574a290e18f08375aaa34c5b.jpg')
 nico.avatar.attach(io: file, filename: 'nico.png', content_type: 'image/png')
 nico.save!
@@ -35,12 +35,12 @@ lagoon = SwimmingPool.new(location: "7 rue de l'Etoile", user: marion, name: "Le
 lagoon.photo.attach(io: file, filename: 'lagoon.png', content_type: 'image/png')
 lagoon.save!
 
-file = URI.open('https://r-cf.bstatic.com/images/hotel/max1024x768/240/240561482.jpg')
-palm_beach = SwimmingPool.new(location: "10 Miami Street", user: nico, name: "PalmBeach", description: "piscine extraordinaire de 50m de longueur aussi !", price_per_day: 70)
-palm_beach.photo.attach(io: file, filename: 'palm_beach.png', content_type: 'image/png')
-palm_beach.save!
+file = URI.open('https://live.staticflickr.com/3525/3998967428_f431bc80bf.jpg')
+jacuzzi = SwimmingPool.new(location: "27 rue de la Carterie", user: nico, name: "Jacuzzi de Nico (attention grosses bulles !)", description: "Cocktails offerts", price_per_day: 70)
+jacuzzi.photo.attach(io: file, filename: 'jacuzzi.png', content_type: 'image/png')
+jacuzzi.save!
 
-resa_one = Reservation.create!(starting_date: '07/08/2020' , status: 'Pending', ending_date: '10/08/2020', total_price: 200, user: marion, swimming_pool: palm_beach)
+resa_one = Reservation.create!(starting_date: '07/08/2020' , status: 'Pending', ending_date: '10/08/2020', total_price: 200, user: marion, swimming_pool: jacuzzi)
 resa_two = Reservation.create!(starting_date: '07/08/2020', status: 'Accepted', ending_date: '17/08/2020', total_price: 700, user: nico, swimming_pool: lagoon)
 
 
