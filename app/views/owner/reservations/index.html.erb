@@ -11,7 +11,7 @@
             <p><strong><%= reservation.swimming_pool.name %></strong></p>
             <p>Starting: <strong><%= reservation.starting_date %></strong></p>
             <p>Ending: <strong><%= reservation.ending_date %></strong></p>
-            <p>Status: <strong><%= reservation.status %></strong></p>
+            <p>Status: <strong><%= reservation.status.capitalize %></strong></p>
             <% if reservation.status == "pending" %>
             <%= link_to "Accept", accept_owner_reservation_path(reservation), class: "btn btn-success" %>
             <%= link_to "Decline", decline_owner_reservation_path(reservation), class: "btn btn-danger" %>
