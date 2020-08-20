@@ -4,7 +4,7 @@
 <div class="card-deck">
   <% @swimming_pools.each do |swimming_pool| %>
       <div class="card pool-card">
-        <%= cl_image_tag swimming_pool.photo.key, crop: :fill %>
+        <%= cl_image_tag swimming_pool.photo.key, width: 540, height: 300, crop: :fill %>
         <div class="card-body pool-body">
           <%= link_to "#{swimming_pool.name}", swimming_pool_path(swimming_pool), class: "pool-name card-title" %>
           <p class="card-text pool-owner"><%= swimming_pool.user.first_name %></p>
