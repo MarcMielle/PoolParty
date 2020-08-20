@@ -23,6 +23,7 @@ class SwimmingPoolsController < ApplicationController
 
   def create
     @swimming_pool = SwimmingPool.new(swimming_pool_params)
+    @swimming_pool.user = current_user
     @swimming_pool.save
     # no need for app/views/restaurants/create.html.erb
     redirect_to swimming_pools_path
