@@ -5,6 +5,7 @@
   background: $bluelagoon;
   transition: background 0.3s ease;
   margin-top:10px;
+  width: 230px;
 }
 
 .btn-flat-blue:hover {
@@ -14,19 +15,36 @@
 
 
 .btn-flat-green {
+  width: 230px;
   color: white;
-  padding: 6px 16px;
+  padding: 8px 24px;
   border-radius: 2px;
   transition: background 0.3s ease;
   margin-top:10px;
-  background-color: $lightgreen;
+  background-color: $fuschia;
 }
 
 .btn-flat-green:hover {
-  background: #408C79;
-  color: $strong-gray;
+  background: #B3056A;
+  color: $light-gray;
 }
 
+.btn-flat-back {
+  width: 230px;
+  color: $bluelagoon;
+  padding: 8px 24px;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+  margin-top:10px;
+  background-color: white;
+  border: 1px solid $bluelagoon;
+}
+
+.btn-flat-back:hover {
+  background: #EBEBEB;
+  color: #04B4AE;
+}
+// #04B4AE
 
 .btn-ghost {
   color: #4A4A4A;
