@@ -1,28 +1,29 @@
 .btn-flat-blue {
   color: white;
   padding: 8px 24px;
-  border-radius: 4px;
+  border-radius: 2px;
   background: $bluelagoon;
   transition: background 0.3s ease;
   margin-top:10px;
 }
 
 .btn-flat-blue:hover {
-  background: #00bcd4;
+  background: #04B4AE;
   color: white;
 }
 
+
 .btn-flat-green {
-  color: $strong-gray;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: $lightgreen;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 2px;
   transition: background 0.3s ease;
   margin-top:10px;
+  background-color: $lightgreen;
 }
 
 .btn-flat-green:hover {
-  background: #00bcd4;
+  background: #408C79;
   color: $strong-gray;
 }
 
@@ -44,7 +45,7 @@
 .btn-flat {
   color: white;
   padding: 8px 24px;
-  border-radius: 4px;
+  border-radius: 2px;
   background: #1EDD88;
   transition: background 0.3s ease;
 }
