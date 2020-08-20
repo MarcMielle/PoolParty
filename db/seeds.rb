@@ -40,8 +40,8 @@ palm_beach = SwimmingPool.new(location: "10 Miami Street", user: nico, name: "Pa
 palm_beach.photo.attach(io: file, filename: 'palm_beach.png', content_type: 'image/png')
 palm_beach.save!
 
-resa_one = Reservation.create!(starting_date: '07/08/2020' , status: 'Pending', ending_date: '10/08/2020', total_price: 200, user: marion, swimming_pool: palm_beach)
-resa_two = Reservation.create!(starting_date: '07/08/2020', status: 'Accepted', ending_date: '17/08/2020', total_price: 700, user: nico, swimming_pool: lagoon)
+resa_one = Reservation.create!(starting_date: '07/08/2020' , status: 'pending', ending_date: '10/08/2020', total_price: 200, user: marion, swimming_pool: palm_beach)
+resa_two = Reservation.create!(starting_date: '07/08/2020', status: 'accepted', ending_date: '17/08/2020', total_price: 700, user: nico, swimming_pool: lagoon)
 
 
 
