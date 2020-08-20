@@ -12,6 +12,21 @@
   color: white;
 }
 
+.btn-flat-green {
+  color: $strong-gray;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $lightgreen;
+  transition: background 0.3s ease;
+  margin-top:10px;
+}
+
+.btn-flat-green:hover {
+  background: #00bcd4;
+  color: $strong-gray;
+}
+
+
 .btn-ghost {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
