@@ -64,5 +64,3 @@ puts "seeds ok"
 
 resa_one = Reservation.create!(starting_date: '07/08/2020' , status: 'Pending', ending_date: '10/08/2020', total_price: 200, user: marion, swimming_pool: jacuzzi)
 resa_two = Reservation.create!(starting_date: '07/08/2020', status: 'Accepted', ending_date: '17/08/2020', total_price: 700, user: nico, swimming_pool: lagoon)
-resa_three = Reservation.create!(starting_date: '07/08/2020', status: 'Pending', ending_date: '17/08/2020', total_price: 700, user: caro, swimming_pool: ilot)
-resa_four = Reservation.create!(starting_date: '27/08/2020', status: 'Accepted', ending_date: '29/08/2020', total_price: 100, user: caro, swimming_pool: lagoon)
