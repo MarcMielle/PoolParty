@@ -54,3 +54,16 @@
   text-align:center;
   margin-bottom:40px;
 }
+
+.card-details-price h2 {
+  font-weight: bold;
+  padding: 4px;
+  display: flex;
+}
+
+.container-index-details {
+  display: flex;
+  p {
+    padding-left: 5px;
+  }
+}

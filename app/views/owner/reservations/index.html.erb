@@ -5,25 +5,26 @@
         <div class="card-trip">
             <%= cl_image_tag reservation.swimming_pool.photo.key, crop: :fill %>
             <div class="card-trip-infos">
-                <div>
+                <div class="card-details-price">
                      <h2><%= reservation.user.first_name.capitalize %> <%= reservation.user.last_name.capitalize %></h2>
-                         <p><strong><%= reservation.swimming_pool.name %></strong></p>
-                         <p>Starting: <strong><%= reservation.starting_date %></strong></p>
-                         <p>Ending: <strong><%= reservation.ending_date %></strong></p>
-                         <p>Status: <strong><%= reservation.status.capitalize %></strong></p>
-                    <% if reservation.status == "pending" %>
-                      <%= link_to "Accept", accept_owner_reservation_path(reservation), class: "btn btn-success", data: {confirm: "Accept #{reservation.user.first_name.capitalize}'s booking request?"} %>
-                      <%= link_to "Decline", decline_owner_reservation_path(reservation), class: "btn btn-danger", data: {confirm: "Decline #{reservation.user.first_name.capitalize}'s booking request?"} %>
+                        <h2><%= reservation.swimming_pool.name %></h2>
+                        <h2>Starting: <%= reservation.starting_date %></h2>
+                        <h2>Ending: <%= reservation.ending_date %></h2>
+                        <h2>Status:
+                          <% if reservation.status == "pending" %>
+                            <%= link_to "Accept", accept_owner_reservation_path(reservation), class: "btn btn-success", data: {confirm: "Accept #{reservation.user.first_name.capitalize}'s booking request?"} %>
+                            <%= link_to "Decline", decline_owner_reservation_path(reservation), class: "btn btn-danger", data: {confirm: "Decline #{reservation.user.first_name.capitalize}'s booking request?"} %>
 
-                    <% elsif reservation.status == "Accepted" %>
-                            <div class="status-accepted">
-                              <%= reservation.status %>
-                            </div>
-                    <% else reservation.status == "Declined" %>
-                            <div class="status-declined">
-                              <%= reservation.status %>
-                            </div>
-                    <% end %>
+                          <% elsif reservation.status == "Accepted" %>
+                                  <div class="status-accepted">
+                                    <%= reservation.status %>
+                                  </div>
+                          <% else reservation.status == "Declined" %>
+                                  <div class="status-declined">
+                                    <%= reservation.status %>
+                                  </div>
+                          <% end %>
+                        </h2>
                 </div>
                 <h2 class="card-trip-pricing">€
                     <%= reservation.total_price %>
