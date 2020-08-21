@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>My swimming pools</h1>
+  <h1><%= "#{current_user.first_name.capitalize}" %>, your swimming pools bookings</h1>
 
 
   <% @reservations.each do |reservation| %>

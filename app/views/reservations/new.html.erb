@@ -1,5 +1,5 @@
 <div class="container-reservation-new">
-  <h1>Book now</h1>
+  <h1><%= "#{current_user.first_name.capitalize}" %>, choose your booking dates</h1>
 
   <div class="container">
   <%= simple_form_for([@swimming_pool, @reservation]) do |f| %>
