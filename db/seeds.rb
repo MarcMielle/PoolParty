@@ -41,12 +41,12 @@ jacuzzi.photo.attach(io: file, filename: 'jacuzzi.png', content_type: 'image/png
 jacuzzi.save!
 
 file = URI.open('https://tse2.mm.bing.net/th?id=OIP.-7ImtF632TGWElqLHd34qAHaIy&pid=Api&P=0&w=300&h=300')
-piscine_individuelle = SwimmingPool.new(location: "13 Impasse de l'Enfer", user: marion, name: "Piscine individuelle", description: "Faut pas être gros", price_per_day: 1)
+piscine_individuelle = SwimmingPool.new(location: "13 Impasse de l'Enfer", user: nico, name: "Piscine individuelle", description: "Faut pas être gros", price_per_day: 1)
 piscine_individuelle.photo.attach(io: file, filename: 'piscine_individuelle.png', content_type: 'image/png')
 piscine_individuelle.save!
 
 file = URI.open('https://i.pinimg.com/originals/f9/bd/5c/f9bd5c86221797252e4ca14838104520.jpg')
-ilot = SwimmingPool.new(location: "7 Quai de Versailles", user: nico, name: "L'île flottante", description: "Des barres en perspective", price_per_day: 75)
+ilot = SwimmingPool.new(location: "7 Quai de Versailles", user: marion, name: "L'île flottante", description: "Des barres en perspective", price_per_day: 75)
 ilot.photo.attach(io: file, filename: 'ilot.png', content_type: 'image/png')
 ilot.save!
 
