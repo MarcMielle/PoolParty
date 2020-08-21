@@ -1,8 +1,12 @@
 <div class="container">
-  <h1>My bookings</h1>
-
-
+   <h1><%= "#{current_user.first_name.capitalize}" %>, your current bookings</h1>
+    <div class="content-trip">
+      <div class="btn-resa">
+   <%= link_to 'Find a new pool', swimming_pools_path, class: "btn btn-flat-blue" %>
+      </div>
+      <div class="content-trip-resa">
   <% @reservations.each do |reservation| %>
+
     <div class="card-trip">
       <%= cl_image_tag reservation.swimming_pool.photo.key, crop: :fill %>
       <div class="card-trip-infos">
@@ -11,13 +15,16 @@
             <p><strong><%= reservation.swimming_pool.name %></strong></p>
             <p>Starting: <strong><%= reservation.starting_date %></strong></p>
             <p>Ending: <strong><%= reservation.ending_date %></strong></p>
-            <p>Status: <strong><%= reservation.status %></strong></p>
+            <p>Status: <strong><%= reservation.status.capitalize %></strong></p>
         </div>
         <h2 class="card-trip-pricing">€<%= reservation.total_price %></h2>
         <%= cl_image_tag reservation.user.avatar.key, crop: :fill, class: "card-trip-user avatar-bordered" %>
 
       </div>
     </div>
+
 <% end %>
-      <%= link_to 'Find a new pool', swimming_pools_path, class: "btn btn-flat-blue" %>
+</div>
+</div>
+
 </div>

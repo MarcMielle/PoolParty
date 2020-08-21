@@ -1,36 +1,33 @@
 <div class="container">
-  <h1>My swimming pools</h1>
+ <h1><%= "#{current_user.first_name.capitalize}" %>, your swimming pools bookings</h1>
+    <div class="content-trip">
+        <% @reservations.each do |reservation| %>
+        <div class="card-trip">
+            <%= cl_image_tag reservation.swimming_pool.photo.key, crop: :fill %>
+            <div class="card-trip-infos">
+                <div>
+                     <h2><%= reservation.user.first_name.capitalize %> <%= reservation.user.last_name.capitalize %></h2>
+                         <p><strong><%= reservation.swimming_pool.name %></strong></p>
+                         <p>Starting: <strong><%= reservation.starting_date %></strong></p>
+                         <p>Ending: <strong><%= reservation.ending_date %></strong></p>
+                         <p>Status: <strong><%= reservation.status.capitalize %></strong></p>
+                    <% if reservation.status == "pending" %>
+                    <%= link_to "Accept", accept_owner_reservation_path(reservation), class: "btn btn-success", data: {confirm: "Accept #{reservation.user.first_name.capitalize}'s booking request?"} %>
+                    <%= link_to "Decline", decline_owner_reservation_path(reservation), class: "btn btn-danger", data: {confirm: "Decline #{reservation.user.first_name.capitalize}'s booking request?"} %>
 
-
-  <% @reservations.each do |reservation| %>
-    <div class="card-trip">
-      <%= cl_image_tag reservation.swimming_pool.photo.key, crop: :fill %>
-      <div class="card-trip-infos">
-        <div>
-            <h2><%= reservation.user.first_name.capitalize %> <%= reservation.user.last_name.capitalize %></h2>
-            <p><strong><%= reservation.swimming_pool.name %></strong></p>
-            <p>Starting: <strong><%= reservation.starting_date %></strong></p>
-            <p>Ending: <strong><%= reservation.ending_date %></strong></p>
-            <p>Status: <strong><%= reservation.status.capitalize %></strong></p>
-            <% if reservation.status == "pending" %>
-            <%= link_to "Accept", accept_owner_reservation_path(reservation), class: "btn btn-success" %>
-            <%= link_to "Decline", decline_owner_reservation_path(reservation), class: "btn btn-danger" %>
-            <% else %>
-              <%= reservation.status %>
-            <% end %>
+                    <% else %>
+                    <%= reservation.status %>
+                    <% end %>
+                </div>
+                <h2 class="card-trip-pricing">€
+                    <%= reservation.total_price %>
+                </h2>
+                <%= cl_image_tag reservation.user.avatar.key, crop: :fill, class: "card-trip-user avatar-bordered" %>
+            </div>
+ 
         </div>
-        <h2 class="card-trip-pricing">€<%= reservation.total_price %></h2>
-        <%= cl_image_tag reservation.user.avatar.key, crop: :fill, class: "card-trip-user avatar-bordered" %>
-
-      </div>
+        <% end %>
     </div>
-<% end %>
-      <%= link_to 'Find a pool', swimming_pools_path, class: "btn btn-flat-blue" %>
-      <%= link_to 'Add a swimming pool', new_swimming_pool_path, class: "btn btn-flat-green" %>
+    <%= link_to 'Find a pool', swimming_pools_path, class: "btn btn-flat-blue" %>
+    <%= link_to 'Add a swimming pool', new_swimming_pool_path, class: "btn btn-flat-green" %>
 </div>
-
-<!-- Si le statut est pending alors afficher les boutons accept et decline
-sinon modifier le statut vers accept ou vers decline en fonction
-créer boutton vert pour statut accept + path
-créer boutton rouge pour statut decline + path -->
-
