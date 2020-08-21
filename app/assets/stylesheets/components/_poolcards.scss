@@ -10,6 +10,7 @@ body{
 .object-fit-cover {
   object-fit: cover;
   width: 40%;
+  height: 120px;
 }
 
 
@@ -54,7 +55,7 @@ body{
   flex: 1 0 60%;
 }
 .pool-name{
-  color: $bluelagoon;
+  color: #04B4AE;
   font-weight: bold;
   text-align: center;
   font-size: 20px;
@@ -66,12 +67,14 @@ body{
 }
 
 .pool-owner{
-  color: $fuschia;
+  // color: $fuschia;
+  font-size: 15px;
   // font-style: italic;
+  font-weight: bold;
 }
 
 .pool-address{
-
+  font-size: 15px;
 }
 
 .index-container {
@@ -89,6 +92,11 @@ body{
   display: flex;
   position: sticky;
 }
+
+.myheigh {
+  height: 120px;
+}
+
 
 // @media (max-width:600px) {
 //   .card-deck {
