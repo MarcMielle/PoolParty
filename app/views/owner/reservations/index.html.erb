@@ -1,5 +1,5 @@
 <div class="container">
- <h1><%= "#{current_user.first_name.capitalize}" %>, your swimming pools bookings</h1>
+ <h1><%= "#{current_user.first_name.capitalize}" %>, your booked swimming pools</h1>
     <div class="content-trip">
         <% @reservations.each do |reservation| %>
         <div class="card-trip">
@@ -24,7 +24,7 @@
                 </h2>
                 <%= cl_image_tag reservation.user.avatar.key, crop: :fill, class: "card-trip-user avatar-bordered" %>
             </div>
- 
+
         </div>
         <% end %>
     </div>
