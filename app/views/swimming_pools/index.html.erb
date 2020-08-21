@@ -1,4 +1,4 @@
-<div class="container">
+<div class="index-container">
 
   <h1>Swimming Pools</h1>
   <div class="card-map-index-container">
@@ -16,13 +16,13 @@
           </div>
       <% end %>
     </div>
-
-    <div id="map"
-         style="width: 200px; height: 600px; margin:14px auto"
-         data-markers="<%= @markers.to_json %>"
-         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    <div class="map-index-container">
+      <div id="map"
+           style="width: 100%; height: 600px; margin:0px auto"
+           data-markers="<%= @markers.to_json %>"
+           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
-
   </div>
 
 </div>

@@ -16,14 +16,17 @@ body{
 
 .card-deck {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 16px;
+    margin-left: 10px;
   }
 
-.pool-card{
+.pool-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border-radius: 2px;
   border:none;
-  margin: 10px auto;
+  margin: 0px auto;
   justify-content: center;
 
 
@@ -60,11 +63,20 @@ body{
 
 }
 
+.index-container {
+  width: 100%;
+}
 
 .card-map-index-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: 0px;
+}
+
+.map-index-container {
+  margin: 0 10px;
+  display: flex;
+  position: sticky;
 }
 
 @media (max-width:600px) {
