@@ -5,13 +5,13 @@
 
     <div class="">
       <% @swimming_pools.each do |swimming_pool| %>
-          <div class="d-flex mb-2 border">
+          <div class="d-flex mb-2 border myheight">
           <!--   <div> -->
               <%= cl_image_tag swimming_pool.photo.key, crop: :fill, class: "object-fit-cover" %>
             <!-- </div> -->
             <div class="pool-body">
               <%= link_to "#{swimming_pool.name}", swimming_pool_path(swimming_pool), class: "pool-name" %>
-              <div class="pool-owner"><%= swimming_pool.user.first_name %></div>
+              <div class="pool-owner"> Chez <%= swimming_pool.user.first_name %></div>
               <div class="pool-address"><%= swimming_pool.location %></div>
               <%= link_to "Details", swimming_pool_path(swimming_pool), class: "btn btn-flat-blue" %>
             </div>
