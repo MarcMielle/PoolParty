@@ -11,7 +11,7 @@ require "open-uri"
 #   Character.create(name: 'Luke', movie: movies.first)
 
 marion = User.new(first_name: "Marion", last_name: "Débonnaire", email: "marion@example.com", password: "password")
-file = URI.open('https://perfectczechwomen.com/wp-content/uploads/2019/04/New-Profile-20-500x536.jpg')
+file = URI.open('https://res.cloudinary.com/diqfe7zwg/image/upload/v1598002684/marion_w1wu5b.jpg')
 marion.avatar.attach(io: file, filename: 'marion.png', content_type: 'image/png')
 marion.save!
 
@@ -36,7 +36,7 @@ lagoon.photo.attach(io: file, filename: 'lagoon.png', content_type: 'image/png')
 lagoon.save!
 
 file = URI.open('https://live.staticflickr.com/3525/3998967428_f431bc80bf.jpg')
-jacuzzi = SwimmingPool.new(location: "27 rue de la Carterie", user: nico, name: "Jacuzzi de Nico (attention grosses bulles !)", description: "Cocktails offerts", price_per_day: 70)
+jacuzzi = SwimmingPool.new(location: "27 rue de la Carterie", user: nico, name: "NicoJacuzz (grosses bulles !)", description: "Cocktails offerts", price_per_day: 70)
 jacuzzi.photo.attach(io: file, filename: 'jacuzzi.png', content_type: 'image/png')
 jacuzzi.save!
 
