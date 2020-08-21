@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>All your swimming pools reservations</h1>
+  <h1>My bookings</h1>
 
 
   <% @reservations.each do |reservation| %>
@@ -19,5 +19,5 @@
       </div>
     </div>
 <% end %>
-      <%= link_to 'Back to Swimming Pools', swimming_pools_path, class: "btn btn-small btn-primary" %>
+      <%= link_to 'Find a new pool', swimming_pools_path, class: "btn btn-flat-blue" %>
 </div>

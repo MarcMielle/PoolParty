@@ -1,4 +1,4 @@
-<h1>Add your swimming pool to the PoolParty !</h1>
+<h1>Add a swimming pool</h1>
 
 <div class="container">
 <%= simple_form_for(@swimming_pool) do |f| %>
@@ -8,7 +8,7 @@
   <%= f.input :description, as: :string, html5: true %>
   <%= f.input :price_per_day %>
   <%= f.input :photo, as: :file %>
-  <%= f.submit class: "btn btn-flat-blue" %>
+  <%= f.submit class: "btn btn-flat-green" %>
 <% end %>
 
 </div>

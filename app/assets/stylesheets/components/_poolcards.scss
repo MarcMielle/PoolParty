@@ -2,9 +2,9 @@ body{
   font-family: verdana;
 }
 .pool-title{
-  text-align: center;
-  padding:1em;
-  color: $lightgreen
+  // text-align: center;
+  // padding:1em;
+  // color: black;
 }
 
 .pool-image{
@@ -41,8 +41,9 @@ body{
 }
 .pool-name{
   color: $bluelagoon;
+  font-weight: bold;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
   margin:auto;
   &:hover {
@@ -52,7 +53,7 @@ body{
 
 .pool-owner{
   color: $fuschia;
-  font-style: italic;
+  // font-style: italic;
 }
 
 .pool-address{

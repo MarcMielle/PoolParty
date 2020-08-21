@@ -1,7 +1,8 @@
-
 <div class="container">
-  <h1 class="pool-title">Swimming Pools</h1>
+
+  <h1>Swimming Pools</h1>
   <div class="card-map-index-container">
+
     <div class="card-deck">
       <% @swimming_pools.each do |swimming_pool| %>
           <div class="card pool-card">
@@ -10,14 +11,18 @@
               <%= link_to "#{swimming_pool.name}", swimming_pool_path(swimming_pool), class: "pool-name card-title" %>
               <p class="card-text pool-owner"><%= swimming_pool.user.first_name %></p>
               <p class="card-text pool-address"><%= swimming_pool.location %></p>
+              <%= link_to "Details", swimming_pool_path(swimming_pool), class: "btn btn-flat-blue" %>
             </div>
           </div>
       <% end %>
     </div>
+
     <div id="map"
          style="width: 200px; height: 600px; margin:14px auto"
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
+
   </div>
+
 </div>
