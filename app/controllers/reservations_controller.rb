@@ -1,7 +1,7 @@
 class ReservationsController < ApplicationController
   def index
     # Reservations where le user est == au current_user
-    @reservations = current_user.reservations
+    @reservations = current_user.reservations.order(created_at: :asc)
   end
 
   def new
