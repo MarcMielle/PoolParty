@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>My swimming pools</h1>
+  <h1><%= "#{current_user.first_name.capitalize}" %>, your swimming pools bookings</h1>
 
 
   <% @reservations.each do |reservation| %>
@@ -13,8 +13,8 @@
             <p>Ending: <strong><%= reservation.ending_date %></strong></p>
             <p>Status: <strong><%= reservation.status.capitalize %></strong></p>
             <% if reservation.status == "pending" %>
-            <%= link_to "Accept", accept_owner_reservation_path(reservation), class: "btn btn-success", data: {confirm: "Are you sure ?"} %>
-            <%= link_to "Decline", decline_owner_reservation_path(reservation), class: "btn btn-danger", data: {confirm: "Are you sure ?"} %>
+            <%= link_to "Accept", accept_owner_reservation_path(reservation), class: "btn btn-success", data: {confirm: "Accept #{reservation.user.first_name.capitalize}'s booking request?"} %>
+            <%= link_to "Decline", decline_owner_reservation_path(reservation), class: "btn btn-danger", data: {confirm: "Decline #{reservation.user.first_name.capitalize}'s booking request?"} %>
             <% else %>
               <%= reservation.status %>
             <% end %>
