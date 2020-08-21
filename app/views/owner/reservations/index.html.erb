@@ -10,7 +10,7 @@
                         <h2><%= reservation.swimming_pool.name %></h2>
                         <h2>Starting: <%= reservation.starting_date %></h2>
                         <h2>Ending: <%= reservation.ending_date %></h2>
-                        <h2>Status:
+                        <h2>
                           <% if reservation.status == "pending" %>
                             <%= link_to "Accept", accept_owner_reservation_path(reservation), class: "btn btn-success", data: {confirm: "Accept #{reservation.user.first_name.capitalize}'s booking request?"} %>
                             <%= link_to "Decline", decline_owner_reservation_path(reservation), class: "btn btn-danger", data: {confirm: "Decline #{reservation.user.first_name.capitalize}'s booking request?"} %>

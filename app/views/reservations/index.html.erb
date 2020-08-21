@@ -18,13 +18,17 @@
               <h2>Ending: <%= reservation.ending_date %></h2>
               <h2>Status:
                 <% if reservation.status == "Accepted" %>
-                        <div class="status-accepted">
-                          <%= reservation.status.capitalize %>
-                        </div>
+                  <div class="status-accepted">
+                    <%= reservation.status.capitalize %>
+                  </div>
+                <% elsif reservation.status == "Pending" %>
+                    <div class="status-pending">
+                    <%= reservation.status.capitalize %>
+                  </div>
                 <% else reservation.status == "Declined" %>
-                        <div class="status-declined">
-                          <%= reservation.status.capitalize %>
-                        </div>
+                  <div class="status-declined">
+                    <%= reservation.status.capitalize %>
+                  </div>
                 <% end %>
               </h2>
             </div>
