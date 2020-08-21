@@ -11,11 +11,23 @@
       <%= cl_image_tag reservation.swimming_pool.photo.key, crop: :fill %>
       <div class="card-trip-infos">
         <div>
-            <h2><%= reservation.user.first_name.capitalize %> <%= reservation.user.last_name.capitalize %></h2>
-            <p><strong><%= reservation.swimming_pool.name %></strong></p>
-            <p>Starting: <strong><%= reservation.starting_date %></strong></p>
-            <p>Ending: <strong><%= reservation.ending_date %></strong></p>
-            <p>Status: <strong><%= reservation.status.capitalize %></strong></p>
+            <h2><%#= reservation.user.first_name.capitalize %> <%#= reservation.user.last_name.capitalize %></h2>
+            <div class="card-details-price">
+              <h2><strong><%= reservation.swimming_pool.name %></strong></h2>
+              <h2>Starting: <%= reservation.starting_date %></h2>
+              <h2>Ending: <%= reservation.ending_date %></h2>
+              <h2>Status:
+                <% if reservation.status == "Accepted" %>
+                        <div class="status-accepted">
+                          <%= reservation.status.capitalize %>
+                        </div>
+                <% else reservation.status == "Declined" %>
+                        <div class="status-declined">
+                          <%= reservation.status.capitalize %>
+                        </div>
+                <% end %>
+              </h2>
+            </div>
         </div>
         <h2 class="card-trip-pricing">€<%= reservation.total_price %></h2>
         <%= cl_image_tag reservation.user.avatar.key, crop: :fill, class: "card-trip-user avatar-bordered" %>

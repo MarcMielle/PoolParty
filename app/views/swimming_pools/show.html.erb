@@ -8,12 +8,21 @@
   </div>
 
   <div class="container">
-    <strong>Address:</strong>
-      <p class="inset"><%= @swimming_pool.location %></p>
-      <strong>Description:</strong>
-      <p class="inset"><%= @swimming_pool.description %></p>
-      <strong>Price:</strong>
-      <p class="inset"><%= @swimming_pool.price_per_day %></p>
+    <div class="container-index">
+        <div class="container-index-details">
+          <strong>Address:</strong>
+          <p class="inset"><%= @swimming_pool.location %></p>
+        </div>
+        <div class="container-index-details">
+          <strong>Description:</strong>
+          <p class="inset"><%= @swimming_pool.description %></p>
+        </div>
+        <div class="container-index-details">
+          <strong>Price:</strong>
+          <p class="inset"><%= @swimming_pool.price_per_day %>€</p>
+        </div>
       <%= link_to 'Back to the list', swimming_pools_path, class: "btn btn-flat-back" %>
+
+    </div>
   </div>
 </div>
