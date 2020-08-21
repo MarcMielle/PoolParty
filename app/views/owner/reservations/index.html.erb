@@ -1,6 +1,6 @@
 <div class="container">
  <h1><%= "#{current_user.first_name.capitalize}" %>, your booked swimming pools</h1>
-    <div class="content-trip">
+    <div class="content-trip-resa">
         <% @reservations.each do |reservation| %>
         <div class="card-trip">
             <%= cl_image_tag reservation.swimming_pool.photo.key, crop: :fill %>
@@ -28,6 +28,4 @@
         </div>
         <% end %>
     </div>
-    <%= link_to 'Find a pool', swimming_pools_path, class: "btn btn-flat-blue" %>
-    <%= link_to 'Add a swimming pool', new_swimming_pool_path, class: "btn btn-flat-green" %>
 </div>
