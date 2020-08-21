@@ -36,7 +36,7 @@ lagoon.photo.attach(io: file, filename: 'lagoon.png', content_type: 'image/png')
 lagoon.save!
 
 file = URI.open('https://live.staticflickr.com/3525/3998967428_f431bc80bf.jpg')
-jacuzzi = SwimmingPool.new(location: "27 rue de la Carterie", user: nico, name: "Jacuzzi de Nico (attention grosses bulles !)", description: "Cocktails offerts", price_per_day: 70)
+jacuzzi = SwimmingPool.new(location: "27 rue de la Carterie", user: nico, name: "NicoJacuzz (grosses bulles !)", description: "Cocktails offerts", price_per_day: 70)
 jacuzzi.photo.attach(io: file, filename: 'jacuzzi.png', content_type: 'image/png')
 jacuzzi.save!
 
