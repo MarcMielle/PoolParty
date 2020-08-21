@@ -7,8 +7,14 @@ body{
   // color: black;
 }
 
+.object-fit-cover {
+  object-fit: cover;
+  width: 40%;
+}
+
+
 .pool-image{
-  height:250px;
+  // height:250px;
   object-fit: cover;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -22,12 +28,13 @@ body{
   }
 
 .pool-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
   border-radius: 2px;
-  border:none;
+  border: none;
   margin: 0px auto;
-  justify-content: center;
+
+  // justify-content: center;
 
 
   &:hover {
@@ -36,11 +43,13 @@ body{
 
   img {
     object-fit: cover;
+    width: 100%;
   }
 }
 .pool-body{
-  margin:1em 2em;
+  // margin:1em 2em;
   text-align:center;
+  flex: 1 0 60%;
 }
 .pool-name{
   color: $bluelagoon;
@@ -79,21 +88,21 @@ body{
   position: sticky;
 }
 
-@media (max-width:600px) {
-  .card-deck {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: auto;
-    justify-content: center;
-  }
-  .pool-card {
-    width: 260px;
-  }
-}
+// @media (max-width:600px) {
+//   .card-deck {
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     margin: auto;
+//     justify-content: center;
+//   }
+//   .pool-card {
+//     width: 260px;
+//   }
+// }
 
-@media (max-width:1200px) {
-  .pool-card {
-    width: 300px;
-  }
-}
+// @media (max-width:1200px) {
+//   .pool-card {
+//     width: 300px;
+//   }
+// }
 
