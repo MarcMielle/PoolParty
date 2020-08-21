@@ -12,11 +12,17 @@
                          <p>Ending: <strong><%= reservation.ending_date %></strong></p>
                          <p>Status: <strong><%= reservation.status.capitalize %></strong></p>
                     <% if reservation.status == "pending" %>
-                    <%= link_to "Accept", accept_owner_reservation_path(reservation), class: "btn btn-success", data: {confirm: "Accept #{reservation.user.first_name.capitalize}'s booking request?"} %>
-                    <%= link_to "Decline", decline_owner_reservation_path(reservation), class: "btn btn-danger", data: {confirm: "Decline #{reservation.user.first_name.capitalize}'s booking request?"} %>
+                      <%= link_to "Accept", accept_owner_reservation_path(reservation), class: "btn btn-success", data: {confirm: "Accept #{reservation.user.first_name.capitalize}'s booking request?"} %>
+                      <%= link_to "Decline", decline_owner_reservation_path(reservation), class: "btn btn-danger", data: {confirm: "Decline #{reservation.user.first_name.capitalize}'s booking request?"} %>
 
-                    <% else %>
-                    <%= reservation.status %>
+                    <% elsif reservation.status == "Accepted" %>
+                            <div class="status-accepted">
+                              <%= reservation.status %>
+                            </div>
+                    <% else reservation.status == "Declined" %>
+                            <div class="status-declined">
+                              <%= reservation.status %>
+                            </div>
                     <% end %>
                 </div>
                 <h2 class="card-trip-pricing">€
