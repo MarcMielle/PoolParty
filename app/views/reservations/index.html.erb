@@ -1,8 +1,12 @@
 <div class="container">
-  <h1><%= "#{current_user.first_name.capitalize}" %>, your current bookings</h1>
-
-
+   <h1><%= "#{current_user.first_name.capitalize}" %>, your current bookings</h1>
+    <div class="content-trip">
+      <div class="btn-resa">
+   <%= link_to 'Find a new pool', swimming_pools_path, class: "btn btn-flat-blue" %>
+      </div>
+      <div class="content-trip-resa">
   <% @reservations.each do |reservation| %>
+
     <div class="card-trip">
       <%= cl_image_tag reservation.swimming_pool.photo.key, crop: :fill %>
       <div class="card-trip-infos">
@@ -18,6 +22,9 @@
 
       </div>
     </div>
+
 <% end %>
-      <%= link_to 'Find a new pool', swimming_pools_path, class: "btn btn-flat-blue" %>
+</div>
+</div>
+
 </div>

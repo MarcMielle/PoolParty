@@ -1,8 +1,9 @@
 .card-trip {
-  width: 400px;
+  width: 300px;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 20px;
 }
 
 .card-trip > img {
@@ -36,4 +37,20 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.content-trip{
+  display:flex;
+  flex-direction:column;
+}
+.content-trip-resa{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  align-content:flex-start;
+}
+
+.btn-resa{
+  text-align:center;
+  margin-bottom:40px;
 }
